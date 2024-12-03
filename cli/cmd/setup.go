@@ -20,7 +20,7 @@ var setupCmd = &cobra.Command {
 // Command to set the public albums url in configurations/<environment>.yaml file
 // Reads value from environment variable "ENTE_MUSEUM_DIR"
 var addPublicAlbumsUrl = &cobra.Command {
-  Use: "public-albums-url account add-public-url [url]",
+  Use: "public-albums-url [url]",
   Short: "Set the public-albums URL in Museum YAML configuraiton file",
   Args: cobra.ExactArgs(1),
   Run: func(cmd *cobra.Command, args []string) {
