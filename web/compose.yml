@@ -1,0 +1,14 @@
+services:
+  ente-web:
+    build: .
+    ports:
+      - "3001:3001"
+      - "3002:3002"
+      - "3003:3003"
+      - "3004:3004"
+    environment:
+      - NEXT_ENTE_ACCOUNTS_ENDPOINT=http://localhost:3005
+      - NEXT_ENTE_ALBUMS_ENDPOINT=https://localhost:3006
+      - NODE_ENV=development
+    restart: always
+
